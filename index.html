@@ -64,7 +64,7 @@
     <script type="text/javascript">
 
       function calculateLines() {
-        var input = $('#countLines').val();
+        var input = document.getElementById("countLines").value;
         numLines = 0;
 
         try {
@@ -75,10 +75,7 @@
 
         numLines++;
 
-        console.log(numLines);
-
         document.getElementById("lineCount").textContent = numLines;
-
         return false;
       }
 
