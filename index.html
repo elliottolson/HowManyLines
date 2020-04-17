@@ -49,7 +49,7 @@
 
                     <form action="#">
                         <div class="mdl-textfield mdl-js-textfield" style="width: 100%;">
-                            <textarea class="mdl-textfield__input" id="countLines" rows="15" type="text" onkeyup="return calculateLines()"></textarea>
+                            <textarea class="mdl-textfield__input" id="countLines" rows="25" type="text" onkeyup="return calculateLines()"></textarea>
                             <label class="mdl-textfield__label" for="countLines">Enter text...</label>
                         </div>
                     </form>
@@ -73,7 +73,11 @@
           numLines = 0;
         }
 
-        document.getElementById("lineCount").textContent = (numLines + 1);
+        numLines++;
+
+        console.log(numLines);
+
+        document.getElementById("lineCount").textContent = numLines;
 
         return false;
       }
